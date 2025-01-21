@@ -1,15 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   tools_libft.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rcarpio- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: alvera-f <alvera-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/19 15:41:52 by rcarpio-          #+#    #+#             */
-/*   Updated: 2024/09/25 18:07:39 by rcarpio-         ###   ########.fr       */
+/*   Created: 2025/01/20 14:04:59 by alvera-f          #+#    #+#             */
+/*   Updated: 2025/01/21 14:31:14 by alvera-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
+#include "pipex.h"
+
+int	ft_strlen(const char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}
+
+void	ft_bzero(void *s, size_t n)
+{
+	unsigned char	*ptr;
+	size_t			i;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
+}
+
+char	**split_command(char *cmd)
+{
+	char	**args;
+
+	args = ft_split(cmd, ' ');
+	if (!args || !args[0])
+	{
+		handle_error("Error: invalid command\n");
+	}
+	return (args);
+}
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

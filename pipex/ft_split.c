@@ -1,6 +1,19 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alvera-f <alvera-f@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/20 14:04:00 by alvera-f          #+#    #+#             */
+/*   Updated: 2025/01/20 14:04:07 by alvera-f         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	ft_counter(const char *str, char delimiter)
+#include <stdlib.h>
+#include "pipex.h"
+
+int	ft_counter(const char *str, char delimiter)
 {
 	int	count;
 	int	i;
@@ -25,7 +38,7 @@ static int	ft_counter(const char *str, char delimiter)
 	return (count);
 }
 
-static char	**free_matrix(int position, char **matrix)
+char	**free_matrix(int position, char **matrix)
 {
 	while (position >= 0)
 	{
@@ -35,7 +48,7 @@ static char	**free_matrix(int position, char **matrix)
 	return (NULL);
 }
 
-static char	*allocate_and_copy(const char *str, int start, size_t len)
+char	*allocate_and_copy(const char *str, int start, size_t len)
 {
 	char	*substring;
 
@@ -46,7 +59,7 @@ static char	*allocate_and_copy(const char *str, int start, size_t len)
 	return (substring);
 }
 
-static char	**process_word(const char *s, char c, char **t)
+char	**process_word(const char *s, char c, char **t)
 {
 	int	i;
 	int	start;
