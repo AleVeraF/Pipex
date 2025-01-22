@@ -3,6 +3,7 @@ SRC = pipex.c \
 	  pipex_utils2.c \
 	  ft_split.c \
 	  tools_libft.c \
+	  ft_strncmp.c \
 
 NAME = pipex
 OBJ = $(SRC:.c=.o)

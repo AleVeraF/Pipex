@@ -1,4 +1,0 @@
-tengo que tener en cuenta que cuando no exista un segundo comando, es decir, si lo pasan "" vacio, 
-tiene que mostrar un error
-
-también tengo que intentar que se compruebe si los comandos utilizados son correctos, antes de ejecutar el execv

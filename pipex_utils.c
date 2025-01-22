@@ -6,7 +6,7 @@
 /*   By: alvera-f <alvera-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:04:22 by alvera-f          #+#    #+#             */
-/*   Updated: 2025/01/21 18:21:33 by alvera-f         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:46:52 by alvera-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*get_path_variable(char **envp)
 	i = 0;
 	while (envp[i])
 	{
-		if (strncmp(envp[i], "PATH=", 5) == 0)
+		if (ft_strncmp(envp[i], "PATH=", 5) == 0)
 		{
 			return (envp[i] + 5);
 		}

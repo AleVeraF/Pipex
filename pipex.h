@@ -6,7 +6,7 @@
 /*   By: alvera-f <alvera-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 14:04:50 by alvera-f          #+#    #+#             */
-/*   Updated: 2025/01/20 18:14:58 by alvera-f         ###   ########.fr       */
+/*   Updated: 2025/01/22 14:48:37 by alvera-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,6 @@ char	**ft_split(char const *s, char c);
 void	free_paths(char **paths);
 int		ft_strlen(const char *str);
 void	free_arguments(char **args);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 #endif
